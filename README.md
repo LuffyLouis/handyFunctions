@@ -13,6 +13,7 @@ Copyright (C) 2022, Hongfei Liu
 [![Codecov test
 coverage](https://codecov.io/gh/LuffyLouis/handyFunctions/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LuffyLouis/handyFunctions?branch=main)
 [![R-CMD-check](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with

@@ -4,6 +4,8 @@ Title: Useful functions for handfully manipulating and analyzing data with data.
 Version: 0.1.0
 Author: Hongfei Liu
 Maintainer: Hongfei Liu <lhf563@126.com>
+URL: https://github.com/LuffyLouis/rPackageTutorial
+BugReports: https://github.com/LuffyLouis/rPackageTutorial/issues
 Description: Some useful functions for simply manipulating and analyzing data with data.frame format.
     It mainly includes the following sections: 
     ReformatDataframe

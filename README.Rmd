@@ -21,15 +21,15 @@ knitr::opts_chunk$set(
 # handyFunctions
 
 <!-- badges: start -->
-![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)
-[![Codecov test coverage](https://codecov.io/gh/LuffyLouis/handyFunctions/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LuffyLouis/handyFunctions?branch=main)
-[![R-CMD-check](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml)
+
+![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg) [![Codecov test coverage](https://codecov.io/gh/LuffyLouis/handyFunctions/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LuffyLouis/handyFunctions?branch=main) [![R-CMD-check](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml)
+
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with non-standard data.frame format for R newbies, especially the user in bioinformatics data analysis. Besides, there are also some required plot functions for downstream analysis of dataset generated from vcftools and plink.
 
-
 ## Table of contents
+
 -   [Installation](#installation)
 -   [Example](#example)
     -   [ReformatDataframe](#reformatdataframe)
@@ -38,7 +38,8 @@ The goal of handyFunctions is to get rid of the barrier to deal with non-standar
         -   [plotSNVdensity](#plotsnvdensity)
 -   [License](#license)
 
-## Installation
+## Installation {#installation}
+
 You can install the development version of handyFunctions like so:
 
 ``` r
@@ -51,13 +52,16 @@ remotes::install_github("LuffyLouis/handyFunctions")
 
 ## Example {#example}
 
-`handyFunctions`package contain three main sections, including ReformatDataframe, InteractDataframe, and Post-VCF. There are some basic examples which show you how to solve common problems in data analysis: 
+`handyFunctions`package contain three main sections, including ReformatDataframe, InteractDataframe, and Post-VCF. There are some basic examples which show you how to solve common problems in data analysis:
 
-### ReformatDataframe
+### ReformatDataframe {#reformatdataframe}
+
 This section is designed to reformat data.frame with odd colnames, rownames, or even inappropriate dtypes for each columns.
 
-#### unifyDataframe 
+#### unifyDataframe
+
 Based on the following example `unifyDataframe` function, you can change the formats of raw data.frame to what you want. Especially for the dtypes in data.frame, you can set `custom=FALSE` for automatically changing into appropriate dtypes.
+
 ```{r unifyDataframe, warning=FALSE,echo=TRUE}
 library(handyFunctions)
 data("people")
@@ -65,13 +69,17 @@ head(people)
 modifiedPeople <- unifyDataframe(people,rawColSep = '[.][.]')
 head(modifiedPeople)
 ```
+
 **Note**: due to the separation supporting regEx, please use the `"[.][.]"` for reformatting `people` data.frame.
 
-### InteractDataframe 
-The `InteractDataframe` section is designed for interaction between two data.frame or one data.frame and another vector. 
+### InteractDataframe {#interactdataframe}
+
+The `InteractDataframe` section is designed for interaction between two data.frame or one data.frame and another vector.
 
 #### mergeCustom
-Sometimes, we often find it fuzzy and tedious while we'd like to merge two data.frame with different colnames. Therefore, `mergeCustom` function may be the better solution to get it rid of. 
+
+Sometimes, we often find it fuzzy and tedious while we'd like to merge two data.frame with different colnames. Therefore, `mergeCustom` function may be the better solution to get it rid of.
+
 ```{r mergeCustom, warning=FALSE,echo=TRUE}
 library(handyFunctions)
 data("people");data("grade")
@@ -81,9 +89,10 @@ merged <- mergeCustom(people,grade,xcol = '..name',ycol = 'name')
 head(merged)
 ```
 
-### Post-VCF 
+### Post-VCF {#post-vcf}
 
-#### plotSNVdensity 
+#### plotSNVdensity {#plotsnvdensity}
+
 ```{r plotSNVdensity, warning=FALSE,echo=TRUE}
 library(handyFunctions)
 library(ggplot2)

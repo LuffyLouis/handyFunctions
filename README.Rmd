@@ -1,5 +1,11 @@
 ---
+title: Documentation for package ‘handyFunctions’ version 0.1.0
+author: 
+ - Hongfei Liu
+date: "2022/08/16"
 output: github_document
+toc: true
+theme: united
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,37 +25,72 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-The goal of handyFunctions is to ...
+The goal of handyFunctions is to get rid of the barrier to deal with non-standard data.frame format for R newbies, especially the user in bioinformatics data analysis. Besides, there are also some required plot functions for downstream analysis of dataset generated from vcftools and plink.
+
+-   [Installation](#installation)
+-   [Example](#example)
+    -   [ReformatDataframe](#reformatdataframe)
+    -   [InteractDataframe](#interactdataframe)
+    -   [Post-VCF](#post-vcf)
+        -   [plotSNVdensity](#plotsnvdensity)
+-   [License](#license)
 
 ## Installation
-
 You can install the development version of handyFunctions like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+## Clone it from github and install it locally
+git clone https://github.com/LuffyLouis/handyFunctions.git
+## OR
+## Install it in R
+remotes::install_github("ismailsunni/altRnative")
 ```
 
-## Example
+## Example {#example}
 
-This is a basic example which shows you how to solve a common problem:
+`handyFunctions`package contain three main sections, including ReformatDataframe, InteractDataframe, and Post-VCF. There are some basic examples which show you how to solve common problems in data analysis: 
 
-```{r example}
+### ReformatDataframe
+This section is designed to reformat data.frame with odd colnames, rownames, or even inappropriate dtypes for each columns.
+
+#### unifyDataframe 
+Based on the following example `unifyDataframe` function, you can change the formats of raw data.frame to what you want. Especially for the dtypes in data.frame, you can set `custom=FALSE` for automatically changing into appropriate dtypes.
+```{r unifyDataframe, warning=FALSE,echo=TRUE}
 library(handyFunctions)
-## basic example code
+data("people")
+head(people)
+modifiedPeople <- unifyDataframe(people,rawColSep = '[.][.]')
+head(modifiedPeople)
+```
+**Note**: due to the separation supporting regEx, please use the `"[.][.]"` for reformatting `people` data.frame.
+
+### InteractDataframe 
+The `InteractDataframe` section is designed for interaction between two data.frame or one data.frame and another vector. 
+
+#### mergeCustom
+Sometimes, we often find it fuzzy and tedious while we'd like to merge two data.frame with different colnames. Therefore, `mergeCustom` function may be the better solution to get it rid of. 
+```{r mergeCustom, warning=FALSE,echo=TRUE}
+library(handyFunctions)
+data("people");data("grade")
+head(people)
+head(grade)
+merged <- mergeCustom(people,grade,xcol = '..name',ycol = 'name')
+head(merged)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+### Post-VCF 
 
-```{r cars}
-summary(cars)
+#### plotSNVdensity 
+```{r plotSNVdensity, warning=FALSE,echo=TRUE}
+library(handyFunctions)
+library(ggplot2)
+data("SNV_1MB_density_data")
+head(SNV_1MB_density_data)
+ShowSNPDensityPlot(SNV_1MB_density_data,binSize=1e6,chromSet = c(38:1),withchr=T)+
+  theme(axis.text.y = element_text(size=12))
+
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
+## License {#license}
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+This project is published under MIT license, see file `LICENSE`.

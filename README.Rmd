@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 # handyFunctions
 
 <!-- badges: start -->
-[![](https://lifecycle.r-lib.org/articles/stages.html#experimental)]
+[![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)]
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with non-standard data.frame format for R newbies, especially the user in bioinformatics data analysis. Besides, there are also some required plot functions for downstream analysis of dataset generated from vcftools and plink.
@@ -44,7 +44,7 @@ You can install the development version of handyFunctions like so:
 git clone https://github.com/LuffyLouis/handyFunctions.git
 ## OR
 ## Install it in R
-remotes::install_github("ismailsunni/altRnative")
+remotes::install_github("LuffyLouis/handyFunctions")
 ```
 
 ## Example {#example}

@@ -9,7 +9,7 @@ Copyright (C) 2022, Hongfei Liu
 
 <!-- badges: start -->
 
-\[![](https://lifecycle.r-lib.org/articles/stages.html#experimental)\]
+\[![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)\]
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with
@@ -37,7 +37,7 @@ You can install the development version of handyFunctions like so:
 git clone https://github.com/LuffyLouis/handyFunctions.git
 ## OR
 ## Install it in R
-remotes::install_github("ismailsunni/altRnative")
+remotes::install_github("LuffyLouis/handyFunctions")
 ```
 
 ## Example

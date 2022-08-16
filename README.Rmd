@@ -22,6 +22,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 ![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)
+[![Codecov test coverage](https://codecov.io/gh/LuffyLouis/handyFunctions/branch/main/graph/badge.svg)](https://app.codecov.io/gh/LuffyLouis/handyFunctions?branch=main)
+[![R-CMD-check](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/LuffyLouis/handyFunctions/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with non-standard data.frame format for R newbies, especially the user in bioinformatics data analysis. Besides, there are also some required plot functions for downstream analysis of dataset generated from vcftools and plink.

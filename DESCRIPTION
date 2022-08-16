@@ -27,3 +27,5 @@ Imports:
     ggplot2 (>= 3.0),
     stats (>= 3.0),
     stringr (>= 1.0)
+Suggests: 
+    covr

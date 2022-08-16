@@ -1,15 +1,15 @@
-Documentation for package ‘handyFunctions’ version 0.1.0
+R package ‘handyFunctions’ version 0.1.0
 ================
-Hongfei Liu
+Copyright (C) 2022, Hongfei Liu
 2022/08/16
-
-true
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # handyFunctions
 
 <!-- badges: start -->
+
+\[![](https://lifecycle.r-lib.org/articles/stages.html#experimental)\]
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with
@@ -17,6 +17,8 @@ non-standard data.frame format for R newbies, especially the user in
 bioinformatics data analysis. Besides, there are also some required plot
 functions for downstream analysis of dataset generated from vcftools and
 plink.
+
+## Table of contents
 
 -   [Installation](#installation)
 -   [Example](#example)

@@ -28,7 +28,7 @@
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
 
       <ul class="navbar-nav"><li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/LuffyLouis/rPackageTutorial/" aria-label="github">
+  <a class="external-link nav-link" href="https://github.com/LuffyLouis/handyFunctions/" aria-label="github">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -41,7 +41,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="" class="logo" alt=""><h1>Function of showing SNP density at chromosome level</h1>
-      <small class="dont-index">Source: <a href="https://github.com/LuffyLouis/rPackageTutorial/blob/HEAD/R/postVCF.R" class="external-link"><code>R/postVCF.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/LuffyLouis/handyFunctions/blob/HEAD/R/postVCF.R" class="external-link"><code>R/postVCF.R</code></a></small>
       <div class="d-none name"><code>ShowSNPDensityPlot.Rd</code></div>
     </div>
 
@@ -92,7 +92,7 @@ Note: it cannot work when the filtered chrom set contain other uncommon chrom sy
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/LuffyLouis/rPackageTutorial" class="external-link">handyFunctions</a></span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/LuffyLouis/handyFunctions" class="external-link">handyFunctions</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">SNV_1MB_density_data</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">ShowSNPDensityPlot</span><span class="op">(</span><span class="va">SNV_1MB_density_data</span>, binSize <span class="op">=</span> <span class="fl">1e6</span>, chromSet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">38</span><span class="op">:</span><span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> ## Filtering the density data with specific chrom set...</span>

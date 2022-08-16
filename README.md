@@ -9,7 +9,7 @@ Copyright (C) 2022, Hongfei Liu
 
 <!-- badges: start -->
 
-\[![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)\]
+![](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)
 <!-- badges: end -->
 
 The goal of handyFunctions is to get rid of the barrier to deal with

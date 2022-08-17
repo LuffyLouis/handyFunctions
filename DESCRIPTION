@@ -7,7 +7,8 @@ Maintainer: Hongfei Liu <lhf563@126.com>
 URL: https://github.com/LuffyLouis/handyFunctions
 BugReports: https://github.com/LuffyLouis/handyFunctions/issues
 Description: Some useful functions for simply manipulating and analyzing data with data.frame format.
-  It mainly includes the following sections: ReformatDataframe (reformat dataframe with the modifiers), InteractDataframe, and Post-VCF (for downstream analysis for data generated from vcftools (Petr Danecek, 2011, http://dx.doi.org/10.1093/bioinformatics/btr330) or plink (Chang CC, 2015, https://doi.org/10.1186/s13742-015-0047-8)).
+  It mainly includes the following sections: ReformatDataframe (reformat dataframe with the modifiers), InteractDataframe, and Post-VCF (for downstream analysis for data generated from vcftools (Petr Danecek, 2011, http://dx.doi.org/10.1093/bioinformatics/btr330)
+  or plink (Chang CC, 2015, https://doi.org/10.1186/s13742-015-0047-8)).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

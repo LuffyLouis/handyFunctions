@@ -63,7 +63,7 @@ This section is designed to reformat data.frame with odd colnames, rownames, or 
 Based on the following example `unifyDataframe` function, you can change the formats of raw data.frame to what you want. Especially for the dtypes in data.frame, you can set `custom=FALSE` for automatically changing into appropriate dtypes.
 
 ```{r unifyDataframe, warning=FALSE,echo=TRUE}
-library(handyFunctions)
+library('handyFunctions')
 data("people")
 head(people)
 modifiedPeople <- unifyDataframe(people,rawColSep = '[.][.]')
@@ -81,7 +81,7 @@ The `InteractDataframe` section is designed for interaction between two data.fra
 Sometimes, we often find it fuzzy and tedious while we'd like to merge two data.frame with different colnames. Therefore, `mergeCustom` function may be the better solution to get it rid of.
 
 ```{r mergeCustom, warning=FALSE,echo=TRUE}
-library(handyFunctions)
+library('handyFunctions')
 data("people");data("grade")
 head(people)
 head(grade)
@@ -94,8 +94,8 @@ head(merged)
 #### plotSNVdensity {#plotsnvdensity}
 
 ```{r plotSNVdensity, warning=FALSE,echo=TRUE}
-library(handyFunctions)
-library(ggplot2)
+library('handyFunctions')
+library('ggplot2')
 data("SNV_1MB_density_data")
 head(SNV_1MB_density_data)
 ShowSNPDensityPlot(SNV_1MB_density_data,binSize=1e6,chromSet = c(38:1),withchr=T)+

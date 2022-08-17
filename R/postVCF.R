@@ -14,6 +14,7 @@
 #'
 #' @import ggplot2
 #' @importFrom stats reorder quantile
+#' @importFrom rlang .data
 #'
 #' @examples
 #' library(handyFunctions)
@@ -88,7 +89,7 @@ ShowSNPDensityPlot <- function(densityData, binSize, densityColorBar = c("grey",
   # maxInColorBar<-max(tempSNPDensityData$SNP_COUNT)
 
   p <- ggplot(tempSNPDensityData) +
-    geom_bar(aes(x = LEN / 1e6, y = reorder(CHROM, CHROM), fill = SNP_COUNT), stat = "identity", position = "stack") +
+    geom_bar(aes(x = .data$LEN / 1e6, y = reorder(.data$CHROM, .data$CHROM), fill = .data$SNP_COUNT), stat = "identity", position = "stack") +
     xlab("Position (Mb)") +
     scale_fill_gradientn(
       limits = c(minInColorBar, thirdInColorBar),

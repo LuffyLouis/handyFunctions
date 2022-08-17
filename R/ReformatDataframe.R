@@ -88,6 +88,8 @@ checkDtype <- function(vector) {
   # vector = temp[,1]
   # validVector = unlist(vector)
   # N = length(vector)
+  # vector = c('sd ds','sds sd','ad sd')
+  vector <- c(1, 2, 3, "", NA, "  ", "four", "NA", 5)
   vector <- as.character(unlist(vector))
   check_sum <- sum(unlist(lapply(vector, function(x) {
     !is.na(as.numeric(x))
@@ -96,7 +98,7 @@ checkDtype <- function(vector) {
     is.na(as.numeric(x))
   })), na.rm = T)
   check_blank <- sum(unlist(lapply(vector, function(x) {
-    !is.na(stringr::str_match(x, " "))
+    !is.na(stringr::str_match(x, "^ +$"))
   })), na.rm = T)
   check_null <- sum(unlist(lapply(vector, function(x) {
     x == ""

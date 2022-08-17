@@ -63,7 +63,7 @@ dtypes in data.frame, you can set `custom=FALSE` for automatically
 changing into appropriate dtypes.
 
 ``` r
-library(handyFunctions)
+library('handyFunctions')
 data("people")
 head(people)
 #>          ..name  ..sex ..age ..death..age
@@ -75,13 +75,13 @@ head(people)
 #> 6   Xiaoyu Chen female    74           89
 modifiedPeople <- unifyDataframe(people,rawColSep = '[.][.]')
 head(modifiedPeople)
-#>   name    sex age death_age
-#> 1    3   male  12        34
-#> 2    6 female  23    thirty
-#> 3    5   male  NA        54
-#> 4    2 female  21        77
-#> 5    1   male  11      <NA>
-#> 6    4 female  74        89
+#>            name    sex  age death_age
+#> 1       Ming Li   male   12        34
+#> 2    Zixuan Liu female   23    thirty
+#> 3    Yizhen Zhu   male <NA>        54
+#> 4 Lingling Wang female   21        77
+#> 5      Bang Wei   male   11      <NA>
+#> 6   Xiaoyu Chen female   74        89
 ```
 
 **Note**: due to the separation supporting regEx, please use the
@@ -99,7 +99,7 @@ two data.frame with different colnames. Therefore, `mergeCustom`
 function may be the better solution to get it rid of.
 
 ``` r
-library(handyFunctions)
+library('handyFunctions')
 data("people");data("grade")
 head(people)
 #>          ..name  ..sex ..age ..death..age
@@ -140,8 +140,8 @@ head(merged)
 #### plotSNVdensity
 
 ``` r
-library(handyFunctions)
-library(ggplot2)
+library('handyFunctions')
+library('ggplot2')
 data("SNV_1MB_density_data")
 head(SNV_1MB_density_data)
 #>   CHROM BIN_START SNP_COUNT VARIANTS.KB

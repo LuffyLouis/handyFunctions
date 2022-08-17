@@ -6,7 +6,7 @@
 \alias{handyFunctions-package}
 \title{handyFunctions: Useful functions for handfully manipulating and analyzing data with data.frame format}
 \description{
-Some useful functions for simply manipulating and analyzing data with data.frame format. It mainly includes the following sections: ReformatDataframe modifyColnames: modify the colnames of raw data.frame modifyColTypes: automatically recognize and change the data types of each col modifyRownames: modify the rownames of raw data.frame unifyDataframe: reformat dataframe with the above all modifiers simultaneously splitCol: return specific-indexed vector according to given delimitator/separator by splitting one col in data.frame InteractDataframe mergeCustom: merge two data.frame based on xcol and ycol matchIndex: return index of x data.frame with the given vector/list or ycol in data.frame (if set the accurate match or not) Post-VCF plotSNVdensity: Function of showing SNP density at chromosome level
+Some useful functions for simply manipulating and analyzing data with data.frame format. It mainly includes the following sections: ReformatDataframe (reformat dataframe with the modifiers), InteractDataframe, and Post-VCF (for downstream analysis for data generated from vcftools or plink).
 }
 \seealso{
 Useful links:

@@ -26,6 +26,6 @@ Return reformatted data.frame with standard col names
 \examples{
 library(handyFunctions)
 data(people)
-modified_people <- modifyColNames(people)
+modified_people <- modifyColNames(people,rawSep = "[.][.]")
 
 }

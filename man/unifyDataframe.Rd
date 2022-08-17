@@ -35,6 +35,6 @@ Reformat dataframe with the all modifiers simultaneously (colNames, rowNames and
 \examples{
 library(handyFunctions)
 data(people)
-unifyDataframe(people)
+unifyDataframe(people,rawColSep = "[.][.]")
 
 }

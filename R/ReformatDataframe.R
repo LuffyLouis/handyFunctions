@@ -15,7 +15,7 @@
 #' @examples
 #' library(handyFunctions)
 #' data(people)
-#' modified_people <- modifyColNames(people)
+#' modified_people <- modifyColNames(people,rawSep = "[.][.]")
 #'
 modifyColNames <- function(rawDataFrame, cols = TRUE, rawSep = "..", sep = "_") {
   # rawDataFrame <<- rawDataFrame
@@ -241,7 +241,7 @@ modifyRowNames <- function(rawDataFrame, rows = TRUE, rawSep = "..", sep = "_") 
 #' @examples
 #' library(handyFunctions)
 #' data(people)
-#' unifyDataframe(people)
+#' unifyDataframe(people,rawColSep = "[.][.]")
 #'
 unifyDataframe <- function(rawDataFrame, rawRowSep = "..", rowSep = "_", rawColSep = "..", colSep = "_", changeDtype = TRUE) {
   modifiedDataFrame <- modifyColNames(rawDataFrame, cols = T, rawSep = rawColSep, sep = colSep)

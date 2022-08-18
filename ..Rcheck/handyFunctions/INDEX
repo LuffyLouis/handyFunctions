@@ -1,0 +1,28 @@
+SNV_1MB_density_data    The SNPV number within 1Mb bins at chromosome
+                        levels generated from transcriptome dataset of
+                        two dog populations (including wild wolf and
+                        domesticated dogs).
+ShowSNPDensityPlot      Function of showing SNP density at chromosome
+                        level
+checkCols               check the validation and return index of cols
+                        given from input in rawDataFrame
+checkDtype              Return suggested dtype of vector input
+grade                   Grade records of virtual persons in high school
+matchIndex              Return the index of source vector matched with
+                        query vector
+mergeCustom             merge two data.frame based on xcol and ycol
+modifyColNames          Return reformatted data.frame with standard col
+                        names
+modifyColTypes          Return suggested appropriate dtypes for each
+                        column in rawDataFrame
+modifyRowNames          Return reformatted data.frame with standard row
+                        names
+people                  Basic information of virtual persons
+queryingInfo            return index of x data.frame with the given
+                        vector/list or ycol in data.frame (if set the
+                        accurate match or not)
+splitCol                Return specific-indexed vector according to
+                        given delimitator/separator by splitting one
+                        col in data.frame
+unifyDataframe          Reformat dataframe with the all modifiers
+                        simultaneously (colNames, rowNames and dtypes)

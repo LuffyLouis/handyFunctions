@@ -4,9 +4,9 @@
 \name{handyFunctions-package}
 \alias{handyFunctions}
 \alias{handyFunctions-package}
-\title{handyFunctions: Useful functions for handfully manipulating and analyzing data with data.frame format}
+\title{handyFunctions: Useful Functions for Handfully Manipulating and Analyzing Data with Data.frame Format}
 \description{
-Some useful functions for simply manipulating and analyzing data with data.frame format. It mainly includes the following sections: ReformatDataframe (reformat dataframe with the modifiers), InteractDataframe, and Post-VCF (for downstream analysis for data generated from vcftools or plink).
+Some useful functions for simply manipulating and analyzing data with data.frame format. It mainly includes the following sections: ReformatDataframe (reformat dataframe with the modifiers), InteractDataframe, and Post-VCF (for downstream analysis for data generated from vcftools (Petr Danecek, 2011) \url{http://dx.doi.org/10.1093/bioinformatics/btr330} or plink (Chang CC, 2015) \url{https://doi.org/10.1186/s13742-015-0047-8}.
 }
 \seealso{
 Useful links:

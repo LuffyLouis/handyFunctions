@@ -47,6 +47,8 @@ modifyColNames <- function(rawDataFrame, cols = TRUE, rawSep = "..", sep = "_") 
 #' @return return validation (only FALSE if invaild cols input) or index of cols
 #' @export
 #'
+#' @importFrom methods is
+#'
 #' @examples
 #' library(handyFunctions)
 #' data(people)
@@ -55,8 +57,8 @@ modifyColNames <- function(rawDataFrame, cols = TRUE, rawSep = "..", sep = "_") 
 #' checkCols(people, c(1, 2))
 checkCols <- function(rawDataFrame, cols) {
   rawColNames <- colnames(rawDataFrame)
-  if (class(cols) == "character" | class(cols) == "numeric" & length(cols) > 1) {
-    if (class(cols) == "character") {
+  if (is(cols,"character") | is(cols,"numeric") & length(cols) > 1) {
+    if (is(cols,"character")) {
       ColNamesIndex <- unlist(lapply(cols, function(x) {
         which(rawColNames == x)
       }))
@@ -136,6 +138,8 @@ checkDtype <- function(vector) {
 #' @return Return a new data.frame with appropriate dtypes suggested for each cols
 #' @export
 #'
+#' @importFrom methods is
+#'
 #' @examples
 #' library(handyFunctions)
 #' data(people)
@@ -153,7 +157,7 @@ modifyColTypes <- function(rawDataFrame, cols = TRUE, dtype = FALSE, custom = FA
     if (dtype == FALSE) {
       message("Error, dtype is FALSE:\n You must specify the data type of the given cols!")
       return(FALSE)
-    } else if (class(dtype) == "character" & length(dtype) >= 1) {
+    } else if (is(dtype, "character") & length(dtype) >= 1) {
       if (length(dtype) == length(cols)) {
         for (i in 1:length(ColNamesIndex)) {
           if (!is.na(stringr::str_match(dtype[i], "num"))) {
@@ -199,6 +203,8 @@ modifyColTypes <- function(rawDataFrame, cols = TRUE, dtype = FALSE, custom = FA
 #' @return A modified data.frame with row names separated by your given delimitator
 #' @export
 #'
+#' @importFrom methods is
+#'
 #' @examples
 #' library(handyFunctions)
 #' data(people)
@@ -208,7 +214,7 @@ modifyRowNames <- function(rawDataFrame, rows = TRUE, rawSep = "..", sep = "_") 
   # rawDataFrame <<- rawDataFrame
   modifiedDataFrame <- rawDataFrame
   rawRowNames <- rownames(rawDataFrame)
-  if (class(rows) == "character" | class(rows) == "numeric" & length(rows) > 1) {
+  if (is(rows, "character") | is(rows,"numeric") & length(rows) > 1) {
     rawRowNamesIndex <- unlist(lapply(rows, function(x) {
       which(rawRowNames == x)
     }))
@@ -266,6 +272,8 @@ unifyDataframe <- function(rawDataFrame, rawRowSep = "..", rowSep = "_", rawColS
 #' @return specific-indexed vector or factor
 #' @export
 #'
+#' @importFrom methods is
+#'
 #' @examples
 #' library(handyFunctions)
 #' data(people)
@@ -275,16 +283,16 @@ splitCol <- function(data, col = FALSE, sep, index, fixed = TRUE) {
   level <- NULL
   isFactor <- FALSE
 
-  if (class(data) == "data.frame") {
+  if (is(data, "data.frame")) {
     if (col == FALSE) {
       message("Error: please specify the col!")
       return(FALSE)
     } else {
       inputVector <- data[, col]
     }
-  } else if (class(data) == "character") {
+  } else if (is(data, "character")) {
     inputVector <- data
-  } else if (class(data) == "factor") {
+  } else if (is(data, "factor")) {
     # warning("The class of ",substitute(data), 'is factor!\n It has been changed into character dtype!')
     # inputVector = as.character(data)
     inputVector <- data
@@ -294,7 +302,7 @@ splitCol <- function(data, col = FALSE, sep, index, fixed = TRUE) {
     return(FALSE)
   }
 
-  if (class(inputVector) == "factor") {
+  if (is(inputVector, "factor")) {
     isFactor <- TRUE
     level <- levels(inputVector)
     inputVector <- as.character(inputVector)

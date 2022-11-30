@@ -42,6 +42,8 @@ git clone https://github.com/LuffyLouis/handyFunctions.git
 ## OR
 ## Install it in R
 remotes::install_github("LuffyLouis/handyFunctions")
+## OR
+install.packages("handyFunctions")
 ```
 
 ## Example
